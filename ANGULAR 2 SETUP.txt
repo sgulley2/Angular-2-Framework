@@ -1,0 +1,78 @@
+ANGULAR 2 SETUP 
+===============
+
+
+One time PC setup
+------------------
+
+1. Disable the typescript compiler inside Visual Studio
+
+	-	Open Web project file : note this is the actual project file not the project itself
+
+	-	Just inside the <PropertyGroup> tag add the following:
+			<TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+
+		typescript compilations will always be done externally via @angular-cli
+
+2. Goto Web Folder
+
+
+3. Upgrade npm and node to latest
+   
+   -  open a terminal as Administrator  
+
+   -  goto node's installed location - typically C:\Program Files\nodejs
+   
+   -  npm install npm@latest
+
+   -  http://nodejs.org - run Recommended msi
+
+
+4. Resolve firewall
+
+   -  npm config set proxy http://squid:8080
+
+   -  npm config set https-proxy http://squid:8080
+
+
+5. Install angular-cli
+
+   -  npm install -g @angular/cli@latest 
+
+
+6. Copy .typingsrc file to web folder
+
+   - this file can be obtained from the web folder on the standards site
+
+
+7. Configure starting-block-angular2 folder 
+
+   -  install starting-block-angular2 folder in the same manner as it is configured on the standards site
+
+   -  inside folder run npm install to setup node_modules 
+   
+   -  inside SampleComponent folder configure a hard link back to node_modules via:
+		 mklink /J node_modules <full path to starting-block-angular2\node_modules>
+
+
+8. New component setup 
+
+   -  Copy SampleComponent folder for all new components and establish hard links as in previous step
+
+   -  Code new components as desired 
+
+
+   NOTE:  NEVER EDIT ANY PACKAGE.JSON FILES IN VISUAL STUDIO!
+   ==========================================================
+
+
+	
+
+
+
+
+
+
+
+
+
